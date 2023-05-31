@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website/Overview</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>JS</h3>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="pop.html">JS Pop Message</a></li>
+            <li><a href="Declaring.html">Declaring Variable</a></li>
+            <li><a href="condition.html">Conditional Statement</a></li>
+            <li><a href="loops.html">Loops</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="multideminsional.html">Multi Arrays</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Multidimensional array</h1>
+        <div class="Info">
+            <p>
+                A multidimensional array is an array that contains another array<br>
+                <br>
+                <b>EXAMPLE: </b>
+                <br>
+                const data = [[1, 2, 3], [1, 3, 4], [4, 5, 6]];
+                <br><br>
+                <b>Create a Multidimensional Array</b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23], ['Peter', 24]];
+                <br>
+                let student1 = ['Jack', 24];<br>
+                let student2 = ['Sara', 23];<br>
+                let student3 = ['Peter', 24];<br>
+                <br>
+                <b>// multidimensional array</b>
+                <br>
+                let studentsData = [student1, student2, student3];
+                <br><br>
+                <b>EXAMPLE: </b>
+                <br>
+                let x = [
+                <br>
+                ['Jack', 24],<br>
+                ['Sara', 23],<br>
+                ['Peter', 24]<br>
+                ];
+                <br><br>
+                <b>// access the first item</b>
+                <br>
+                console.log(x[0]);
+                <br>
+                <br>Output:<br>
+                <b>["Jack", 24]</b>
+                <br>
+                <b>// access the first item of the first inner array</b>
+                <br>
+                console.log(x[0][0]);
+                <br>
+                <br>Output:<br>
+                <b>Jack</b>
+                <br>
+                <b>// access the second item of the third inner array</b>
+                <br>
+                console.log(x[2][1]);
+                <br>
+                <br>Output:<br>
+                <b>24</b>
+                <br><br>
+                <b>Add an Element to a Multidimensional Array</b>
+                <br>
+                You can use the Array's push() method or an indexing notation to add elements to a multidimensional array.
+                <br><br>
+                <b>EXAMPLE: </b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23],];
+                <br>
+                studentsData.push(['Peter', 24]);
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24], ["Sara", 23], ["Peter", 24]</b>
+                <br><br>
+                <b>// using index notation</b>
+                let studentsData = [['Jack', 24], ['Sara', 23],];
+                <br>
+                studentsData[1][2] = 'hello';
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24], ["Sara", 23, "hello"]]</b>
+                <br><br>
+                <b> // using push()</b><br>
+                let studentsData = [['Jack', 24], ['Sara', 23],];
+                <br>
+                studentsData[1].push('hello');
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24], ["Sara", 23, "hello"]]</b>
+                <br><br>
+                You can also use the Array's splice() method to add an element at a specified index.
+                <br>
+                <b>For example: </b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23],];
+                <br><br>
+                <b>// adding element at 1 index</b>
+                <br>
+                studentsData.splice(1, 0, ['Peter', 24]);
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24], ["Peter", 24], ["Sara", 23]]</b>
+                <br><br>
+               <b> Remove an Element from a Multidimensional Array</b>
+               <br><br>
+                You can use the Array's pop() method to remove the element from a multidimensional array. 
+                <br>
+                <b>For example: </b>
+                <br><br>
+                <b>// remove the array element from outer array</b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23],];
+                <br>
+                studentsData.pop();
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24]]</b>
+                <br><br>
+                <b>// remove the element from the inner array</b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23]];
+                <br>
+                studentsData[1].pop();
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24], ["Sara"]]</b>
+                <br><br>
+                You can also use the splice() method to remove an element at a specified index. 
+                <br>
+                <b>For example: </b>
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23]];
+                <br><br>
+                <b>// removing 1 index array item</b>
+                <br>
+                studentsData.splice(1,1);
+                <br>
+                console.log(studentsData);
+                <br>
+                <br>Output:<br>
+                <b>[["Jack", 24]]</b>
+                <br><br>
+               <b> Iterating over Multidimensional Array</b>
+               <br>
+                You can iterate over a multidimensional array using the Array's forEach() method to iterate over the multidimensional array.
+                <br>
+                let studentsData = [['Jack', 24], ['Sara', 23]];
+                <br><br>
+                <b>// iterating over the studentsData</b>
+                <br>
+                studentsData.forEach((student) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;student.forEach((data) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>
+                });
+            </p>
+        </div>
+    </div>
+</body>
+</html>

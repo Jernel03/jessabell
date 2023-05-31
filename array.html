@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website/Overview</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>JS</h3>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="pop.html">JS Pop Message</a></li>
+            <li><a href="Declaring.html">Declaring Variable</a></li>
+            <li><a href="condition.html">Conditional Statement</a></li>
+            <li><a href="loops.html">Loops</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="multideminsional.html">Multi Arrays</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Arrays</h1>
+        <div class="Info">
+            <h2>What Are Arrays in JavaScript? </h2>
+            <p>
+                Arrays in JavaScript are the data type used to store a list of values. 
+                JavaScript array objects can be stored in variables and dealt with in the 
+                same way you deal with any other data type. The difference is that we can 
+                access each value inside the list individually, and perform various 
+                activities, such as looping over it.
+            </p>
+            <h2>Creation of Arrays</h2>
+            <p>
+                The items in an array are enclosed within square brackets. For this example, 
+                we’ll imagine that we are looking at a list of cars.
+                <br><b>Example: </b><br>
+                let cars = ["vios", "toyota", "BMW"];<br>
+                The array above is only holding integer values, but arrays are capable of 
+                holding multiple values of different data types
+            </p>
+            <h2>Accessing Array Elements</h2>
+            <p>
+                The notation for accessing the elements inside an array is also square brackets. 
+                Every element in the array is assigned with an index. By default, 
+                the first index of an array is zero. To retrieve a specified element from an array, 
+                a pair of square brackets enclosing the index value is used, i.e., cars[0]. 
+                To avoid any confusion, think of the index as the number of items to skip, counting 
+                from the start of the array. 
+                <br><b>Example: </b><br>
+                console.log(cars[0]);<br>
+                console.log(cars[2]);<br>
+                The code above will display the values “vios” and “toyota” respectively on the console. 
+            </p> 
+            <h2>Loop Over the Array Items</h2>
+            <p>
+                You can also loop over an array in case you need to access multiple elements 
+                from the array at once. We use the forEach method for this, which calls a 
+                function once for each element in an array. 
+                <br><b>Example:</b><br>
+                cars.forEach((item, index, array) => {
+                    <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(item, index);
+                    <br>
+                });<br>
+                The code above displays the name of the cars and their corresponding indices on the console. 
+                <br>
+                <br>
+            </p> 
+            <p>
+                <b>ARRAYS IN TWO WAYS</b><br><br>
+                  <b> - Using an array literal</b>
+                <br>
+                   - The easiest way to create an array is by using an array literal []
+                <br>
+                   - const array1 = ["eat", "sleep"];
+                <br>
+                <b>Using the new keyword</b>
+                <br>
+                  - You can also create an array using JavaScript's new keyword
+                <br>
+                  - const array2 = new Array("eat", "sleep");
+                <br>
+                <br>
+                <b>Here are more examples of arrays</b>
+                <br><br>
+                <b>// empty array</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const myList = [ ];
+                <br>
+                <b> // array of numbers</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const numberArray = [ 2, 4, 6, 8];
+                <br>
+                <b>// array of strings</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const stringArray = [ 'eat', 'work','sleep'];
+                <br>
+               <b> // array with mixed data types</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const newData = ['work','exercise', 1, true];
+                <br><br>
+                <b>You can also store arrays, functions and other objects inside an arrays</b>
+                <br>
+                const newData = [
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{'task1': 'exercise'},
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1, 2 ,3],
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function hello() {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('hello')
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                <br>
+                ];
+                <br><br>
+               <b> Access Elements of an Array</b>
+               <br>
+               You can access elements of an array using indices (0, 1, 2 …).
+               <br>
+               const myArray = ['h', 'e', 'l', 'l', 'o'];
+               <br>// first element
+               <br>console.log(myArray[0]); // "h"
+               <br> // second element
+               <br>console.log(myArray[1]); // "e“
+               <br><br>
+               <b>Add an Element to an Array</b>
+               <br>
+               You can use the built-in method push() and unshift() to add elements to an array.
+               <br>
+                The <b>push() </b>method adds an element at the end of the array.
+                <br><br>
+                <b>EXAMPLE: </b>
+                <br>
+                let dailyActivities = ['eat', 'sleep'];
+                <br>
+                <b>// add an element at the end</b>
+                <br>
+                dailyActivities.push('exercise');
+                <br>
+                console.log(dailyActivities); 
+                <br><br>
+                output:
+                <br>
+                <b>['eat','sleep', 'exercise']</b>
+                <br><br><br>
+                The <b>unshift()</b> method adds an element at the beginning of the array.
+                <br><br>
+                <b>EXAMPLE: </b>
+                <br>
+                let dailyActivities = ['eat', 'sleep'];
+                <br>
+                <b>//add an element at the start</b>
+                <br>
+                dailyActivities.unshift('work');
+                <br>
+                console.log(dailyActivities);
+                <br><br>
+                output:
+                <br>
+                <b>['work', 'eat', 'sleep']</b>
+                <br><br>
+                <b>Remove an Element to an Array</b>
+                <br>
+                You can use the built-in methods shift() and pop() to remove elements from an array.
+                <br>
+                The <b>shift()</b> method removes the first element from an array and returns that element.<br>
+                The remaining elements in the array are shifted down to lower indexes. 
+                <br><br>
+                <b>EXAMPLE: </b><br>
+                let dailyActivities = ['eat','sleep','exercise','work'];
+                <br>
+                dailyActivities.shift();
+                <br>
+                console.log(dailyActivities); 
+                <br><br>
+                Output:
+                <br><br>
+                <b>['sleep','exercise','work']</b>
+                <br><br>
+                The <b>pop() </b>method removes the last element from an array and returns that element.
+                <br><br> 
+                <b>EXAMPLE: </b>
+                <br>
+                let dailyActivities = ['eat','sleep','exercise','work'];
+                <br>
+                dailyActivities.pop();
+                <br>
+                console.log(dailyActivities);
+                <br><br>
+                output:
+                <br>
+                <b>['eat','sleep','exercise']</b>
+                <br><br>
+                <b>Change the Elements of an Array</b>
+                <br><br>
+                let dailyActivities = [ 'eat','sleep'];
+                <br>
+                <b>// this will add the new element 'exercise' at the 2 index</b>
+                <br>
+                dailyActivities[2] ='exercise';
+                <br>
+                console.log(dailyActivities);
+
+                <br><br>
+                output:
+                <b>['eat', 'sleep', 'exercise']</b>
+                <br><br>
+            </p>
+            <h2>Here's the Example output of Push(), Unshift(), Pop(), Shift() </h2>
+            <div class="main_box">
+                <div class="itembox">
+                    <ul id="item">
+                        <!-- Store Data -->
+                    </ul>
+                </div>
+                <input type="text" id="input">
+                <div class="button">
+                    <button onclick="pushbutton()">Push</button>
+                    <button onclick="popbutton()">Pop</button>
+                    <button onclick="unshiftbutton()">Unshift</button>
+                    <button onclick="shiftbutton()">Shift</button>
+                </div>
+            </div>
+            <p>I used the push operation to add an element to the end of the array, 
+                then I used pop to remove the last element, followed by shift to remove the first element, 
+                and finally unshift to add a new element to the beginning of the array.</p>
+            <h4>Here's the code</h4>
+            <br>
+            <div class="imagebox">
+                <img class="images" src="images/array1.png">
+                <img class="images" src="images/array2.png">
+                <img class="images" src="images/array3.png">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

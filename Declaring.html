@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website/Overview</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>JS</h3>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="pop.html">JS Pop Message</a></li>
+            <li><a href="Declaring.html">Declaring Variable</a></li>
+            <li><a href="condition.html">Conditional Statement</a></li>
+            <li><a href="loops.html">Loops</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="multideminsional.html">Multi Arrays</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Declaring Variable</h1>
+        <div class="Info">
+            <p>
+               <b>VARIABES</b> 
+               <br>
+                Variables are named values and can store any type of JavaScript value.
+                <br><br>
+                Here’s how to declare a variable:
+                <br>
+                <b>EXAMPLE:</b><br><br>
+                let x = "Hello universe";
+                <br><br>
+                <b>And here’s what’s happening in the example above:</b>
+                <br> 
+                 - let is the keyword that tells JavaScript you’re declaring a variable.<br>
+                 - x is the name of that variable.<br>
+                 - = is the operator that tells JavaScript a value is coming up next.<br>
+                 - "Hello universe" is the value for the variable to store.<br>
+                <br><br>
+                In JavaScript, there are three ways to declare variables: 
+                <br>using the var, let, and const keywords. Each keyword has its own characteristics and scope rules. 
+                <br><br>
+                <b>Here are examples of each type of variable declaration:</b>
+                <br>
+                <b>let </b>declaration:<br>
+                The let keyword was introduced in ECMAScript 6 (ES6) and provides block-scoping, allowing variables to be limited to 
+                <br>the nearest enclosing block (commonly a pair of curly braces {}).<br> Variables declared with let can be reassigned later within their scope.
+                <br><b>EXAMPLE: </b><br>
+                let x = 10;<br>
+                console.log(x); 
+                <br>
+                <br>Output: 10
+                <br><br>
+                <b>const</b> declaration:
+                <br>The const keyword also appeared in ECMAScript 6 and is used to declare constants that cannot be reassigned.
+                <br> Like let, const is also block-scoped.
+                <br><br>
+                const x = 10;<br>
+                <b>EXAMPLE: </b><br>
+                console.log(x);
+                <br><br>
+                Output: 10
+                <br>
+                x = 20; // Error: Assignment to constant variable
+                <br><br>
+                <b>var</b> declaration:
+                <br>The var keyword has been traditionally used for variable declaration in JavaScript, but it has some quirks and scoping issues. 
+                <br>Variables declared with var are function-scoped, meaning they are accessible within the function they are declared in or at the global scope if declared outside of any function.
+                <br>
+                <b>EXAMPLE: </b>
+                <br><br>
+                // Function-scoped variable
+                <br>  function example() {
+                    <br>var x = 10;
+                    <br>console.log(x); 
+                    <br>
+                    Output: 10
+                    <br>
+                }<br>
+                console.log(x); 
+                <br>// Error: x is not defined (not accessible outside the function)
+                <br><br><br>
+                Overall, it is recommended to use<b> let and const</b> instead of var to avoid scoping issues and to have more predictable code behavior. 
+                <br>The choice between let and const depends on whether you need to reassign the variable or if you want to ensure its immutability.
+            </p>
+        </div>
+    </div>
+</body>
+</html>     
